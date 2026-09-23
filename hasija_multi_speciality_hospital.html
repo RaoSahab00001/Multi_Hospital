@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasija Multi Speciality & Trauma Care Hospital | G.T. Karnal Road, Kundli</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            hospital: {
+              red: '#dc2626',
+              redDark: '#991b1b',
+              navy: '#0f172a',
+              blue: '#0284c7',
+              cyan: '#06b6d4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0.3; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .pulse-indicator {
+      animation: pulse-ring 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-red-100 selection:text-red-900 pb-20 md:pb-0">
+
+  <!-- 24/7 Red Emergency & Trauma Hotline Bar -->
+  <header class="bg-gradient-to-r from-red-700 via-red-600 to-rose-700 text-white text-xs py-2.5 px-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="pulse-indicator absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-300"></span>
+        </span>
+        <span class="font-extrabold tracking-wider uppercase text-[11px] bg-red-900/50 px-2 py-0.5 rounded border border-red-400/40">
+          24x7 Emergency & Highway Trauma
+        </span>
+        <span class="hidden md:inline text-red-100">32 Milestone, G.T. Karnal Road, Kundli (NH-44)</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <div class="flex items-center gap-1.5 bg-black/20 px-2.5 py-1 rounded-full border border-white/20">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-300"></i>
+          <span id="headerLiveStatus">Emergency Open 24/7</span>
+        </div>
+        <a href="tel:09416536804" class="bg-white text-red-700 hover:bg-red-50 px-3 py-1 rounded-lg font-bold flex items-center gap-1.5 shadow-xs transition hover:scale-105">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          <span>Emergency: 09416536804</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Primary Navigation -->
+  <nav class="sticky top-[41px] z-40 glass-nav border-b border-slate-200 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-red-600 to-rose-500 text-white flex items-center justify-center shadow-lg shadow-red-500/25 group-hover:scale-105 transition-transform">
+          <i data-lucide="cross" class="w-7 h-7 stroke-[2.5]"></i>
+        </div>
+        <div>
+          <span class="font-heading font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight block leading-tight">
+            Hasija Multi Speciality
+          </span>
+          <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-red-600 flex items-center gap-1">
+            <i data-lucide="activity" class="w-3 h-3 inline"></i> & Trauma Care Hospital
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#emergency-triage" class="hover:text-red-600 transition">Trauma & ICU</a>
+        <a href="#services" class="hover:text-red-600 transition">Specialities</a>
+        <a href="#hours" class="hover:text-red-600 transition">OPD & 24/7 Hours</a>
+        <a href="#booking-section" class="hover:text-red-600 transition">Book Appointment</a>
+        <a href="#reviews" class="hover:text-red-600 transition">Reviews</a>
+        <a href="#contact" class="hover:text-red-600 transition">Location Map</a>
+      </div>
+
+      <!-- Quick Contact Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://wa.me/919416536804?text=Hello%20Hasija%20Hospital,%20I%20need%20assistance%20with%20medical%20care%20/%20an%20appointment." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-emerald-500/40 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 font-semibold text-xs transition">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> WhatsApp
+        </a>
+        <a href="#booking-section" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-red-600 text-white font-semibold text-xs tracking-wide uppercase transition shadow-sm">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Book OPD
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-red-50/40 via-white to-slate-50 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200">
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-red-200/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-32 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Hero Details -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Rating badge -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-xs">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-slate-300"></i>
+            </div>
+            <span class="text-slate-900 font-bold text-sm">4.0 / 5.0</span>
+            <span class="text-slate-300">|</span>
+            <span class="text-slate-600 text-xs font-semibold">129+ Google Patient Reviews</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+            Critical Trauma & <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-600 to-slate-900">
+              Multi-Speciality Healthcare
+            </span>
+          </h1>
+
+          <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Positioned right on <strong>G.T. Karnal Road (32 Milestone, Kundli)</strong>, Hasija Hospital provides instantaneous emergency trauma resuscitation, advanced orthopedic joint replacement, intensive ICU care, and multi-disciplinary surgeries.
+          </p>
+
+          <!-- Core Capability Highlights -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+            <div class="p-3 bg-white rounded-xl border border-slate-200 shadow-2xs">
+              <i data-lucide="ambulance" class="w-5 h-5 text-red-600 mb-1"></i>
+              <h4 class="text-xs font-bold text-slate-900">24x7 Ambulance</h4>
+              <p class="text-[11px] text-slate-500">Rapid NH-44 highway response</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 shadow-2xs">
+              <i data-lucide="heart-pulse" class="w-5 h-5 text-red-600 mb-1"></i>
+              <h4 class="text-xs font-bold text-slate-900">Advanced ICU & HDU</h4>
+              <p class="text-[11px] text-slate-500">Ventilator & monitor backup</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 shadow-2xs col-span-2 sm:col-span-1">
+              <i data-lucide="bone" class="w-5 h-5 text-red-600 mb-1"></i>
+              <h4 class="text-xs font-bold text-slate-900">Orthopedic & Trauma</h4>
+              <p class="text-[11px] text-slate-500">Fractures & complex surgeries</p>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+            <a href="tel:09416536804" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-base shadow-xl shadow-red-600/30 hover:scale-[1.02] active:scale-[0.98] transition">
+              <i data-lucide="phone-call" class="w-5 h-5"></i> Emergency Hotline: 09416536804
+            </a>
+            <a href="#booking-section" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-semibold text-base border border-slate-300 shadow-xs transition">
+              <i data-lucide="calendar" class="w-5 h-5 text-red-600"></i> Book OPD Consultation
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Quick Triage Hero Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+              <i data-lucide="cross" class="w-64 h-64"></i>
+            </div>
+
+            <div class="flex items-center justify-between mb-5">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/30">
+                <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> HIGHWAY ACCIDENT POINT
+              </span>
+              <span class="text-xs text-slate-400">Sonipat, Haryana</span>
+            </div>
+
+            <h3 class="text-2xl font-heading font-extrabold mb-2">Golden Hour Emergency</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              Located directly at 32 Milestone on GT Karnal Road. Immediate surgical and resuscitation intervention within minutes of highway trauma.
+            </p>
+
+            <!-- Status Box -->
+            <div class="bg-slate-800/90 rounded-2xl p-4 border border-slate-700/80 space-y-3 mb-6">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Trauma & Emergency Casualty</span>
+                <span class="font-bold text-emerald-400 flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block"></span> 24 Hours Open
+                </span>
+              </div>
+              <div class="border-t border-slate-700"></div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">OPD Consultation Schedule</span>
+                <span class="font-bold text-teal-300">Mon–Sat (24h) | Sun (9 AM–4 PM)</span>
+              </div>
+              <div class="border-t border-slate-700"></div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-300">Pharmacy & Diagnostics</span>
+                <span class="font-bold text-emerald-400">24 Hours Available</span>
+              </div>
+            </div>
+
+            <!-- Address note -->
+            <div class="flex items-start gap-2.5 text-xs text-slate-300">
+              <i data-lucide="map-pin" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+              <span>32, Milestone, G.T. Karnal Road, Kundli, Sonipat, Haryana 131028</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trauma & Emergency Alert Strip -->
+  <section id="emergency-triage" class="py-12 bg-red-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        
+        <div class="md:col-span-3 space-y-2">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-black/25 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-300"></i> Critical Emergency Dispatch
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight">
+            Accident or Acute Medical Emergency?
+          </h2>
+          <p class="text-red-100 text-sm max-w-2xl">
+            Our trauma team, orthopedic surgeons, anesthesiologists, and ICU specialists are stationed round-the-clock at 32 Milestone GT Karnal Road for immediate intervention.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row md:flex-col gap-3">
+          <a href="tel:09416536804" class="w-full py-3.5 px-5 rounded-xl bg-white text-red-700 hover:bg-red-50 font-extrabold text-sm text-center shadow-lg transition flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-red-600"></i> CALL 09416536804
+          </a>
+          <a href="https://wa.me/919416536804?text=EMERGENCY:%20Need%20immediate%20medical%20assistance%20at%20Hasija%20Hospital." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 rounded-xl bg-red-800 hover:bg-red-900 text-white font-bold text-xs text-center border border-red-400/40 transition flex items-center justify-center gap-2">
+            <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i> Emergency WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment & OPD Booking Engine -->
+  <section id="booking-section" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-red-600 font-bold uppercase tracking-wider text-xs block mb-2">Patient Services</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
+          Book OPD Consultation or Register Admission
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Schedule your visit with our specialist doctors or fast-track urgent emergency admissions.
+        </p>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/60">
+        <form id="hospitalBookingForm" onsubmit="handleFormSubmission(event)" class="space-y-6">
+          
+          <!-- Emergency checkbox trigger -->
+          <div class="bg-rose-50 border border-rose-200 rounded-2xl p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <input 
+                type="checkbox" 
+                id="isUrgentCase" 
+                onchange="toggleUrgentState(this)" 
+                class="w-5 h-5 text-red-600 rounded border-slate-300 focus:ring-red-500 cursor-pointer"
+              >
+              <label for="isUrgentCase" class="text-xs sm:text-sm font-bold text-slate-900 cursor-pointer">
+                Is this an Emergency / Urgent Trauma Case?
+              </label>
+            </div>
+            <span id="urgentTag" class="text-[11px] font-bold text-rose-700 bg-rose-100 px-2.5 py-1 rounded-full uppercase hidden">
+              Urgent Triage
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Patient Name -->
+            <div>
+              <label for="patientFullName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Patient Full Name <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <i data-lucide="user" class="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input 
+                  type="text" 
+                  id="patientFullName" 
+                  required 
+                  placeholder="e.g. Surender Verma" 
+                  class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 text-sm bg-white outline-none transition"
+                >
+              </div>
+            </div>
+
+            <!-- Mobile Phone -->
+            <div>
+              <label for="patientContactPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Contact Phone / WhatsApp <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <i data-lucide="phone" class="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input 
+                  type="tel" 
+                  id="patientContactPhone" 
+                  required 
+                  pattern="[0-9]{10}"
+                  placeholder="10-digit mobile number" 
+                  class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 text-sm bg-white outline-none transition"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Medical Department -->
+            <div>
+              <label for="clinicalDepartment" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Speciality / Department <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <i data-lucide="stethoscope" class="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <select 
+                  id="clinicalDepartment" 
+                  required 
+                  class="w-full pl-11 pr-10 py-3 rounded-xl border border-slate-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 text-sm bg-white outline-none transition appearance-none cursor-pointer"
+                >
+                  <option value="" disabled selected>Select Medical Department</option>
+                  <option value="Trauma & Emergency Care (Casualty)">Trauma & Emergency Care (24/7)</option>
+                  <option value="Orthopedics & Joint Replacement">Orthopedics & Fracture Treatment</option>
+                  <option value="General & Laparoscopic Surgery">General & Laparoscopic Surgery</option>
+                  <option value="Critical Care / ICU & HDU">Critical Care & Intensive Care (ICU)</option>
+                  <option value="General Medicine & Diabetology">General Medicine & Diabetology</option>
+                  <option value="Cardiology Consultation">Cardiology (Heart Care)</option>
+                  <option value="Pediatrics & Child Health">Pediatrics & Neonatology</option>
+                  <option value="Obstetrics & Gynecology">Gynecology & Maternity</option>
+                  <option value="Diagnostic Lab & Digital X-Ray">Diagnostic Lab & Imaging</option>
+                </select>
+                <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+              </div>
+            </div>
+
+            <!-- Preferred Date -->
+            <div>
+              <label for="consultationDate" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Preferred Date <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <i data-lucide="calendar" class="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input 
+                  type="date" 
+                  id="consultationDate" 
+                  required 
+                  onchange="updateHospitalSlots()" 
+                  class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 text-sm bg-white outline-none transition cursor-pointer"
+                >
+              </div>
+              <p id="dateStatusHelp" class="text-[11px] text-slate-500 mt-1">Select date to inspect available consultation shifts.</p>
+            </div>
+          </div>
+
+          <!-- Time Slot Selection -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+              Select Time Shift <span class="text-rose-600">*</span>
+            </label>
+            <div id="slotGridContainer" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
+              <!-- Dynamically populated via JS -->
+            </div>
+            <input type="hidden" id="selectedHospitalSlot" required>
+            <p id="slotWarning" class="text-xs text-rose-600 mt-2 font-medium hidden">Please choose a preferred time slot.</p>
+          </div>
+
+          <!-- Symptoms / Notes -->
+          <div>
+            <label for="patientSymptoms" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+              Chief Complaints / Symptoms (Optional)
+            </label>
+            <textarea 
+              id="patientSymptoms" 
+              rows="2" 
+              placeholder="e.g., Road traffic accident, severe knee pain, chest tightness, high fever, or regular consultation..." 
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 text-sm bg-white outline-none transition"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div>
+            <button 
+              type="submit" 
+              id="submitFormBtn" 
+              class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-extrabold text-base shadow-lg shadow-red-600/25 transition flex items-center justify-center gap-2 uppercase tracking-wide cursor-pointer"
+            >
+              <i data-lucide="check-circle" class="w-5 h-5"></i> Confirm Appointment Details
+            </button>
+            <div class="flex items-center justify-center gap-4 text-xs text-slate-500 mt-3 text-center">
+              <span>✓ Instant Reception Alert</span>
+              <span>•</span>
+              <span>✓ WhatsApp Direct Slip</span>
+              <span>•</span>
+              <span>✓ Zero Convenience Fee</span>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Specialities & Hospital Facilities -->
+  <section id="services" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-red-600 font-bold uppercase tracking-wider text-xs block mb-2">Clinical Excellence</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
+          Specialised Departments & Advanced Facilities
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Equipped with state-of-the-art modular operation theaters, high-dependency intensive care, and on-premise emergency diagnostics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Department 1 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-2xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-5">
+            <i data-lucide="ambulance" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">24x7 Trauma & Emergency</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Dedicated highway emergency resuscitation unit, head injury management, polytrauma care, and rapid response paramedic units.
+          </p>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-red-600">
+            Immediate Casualty Care <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Department 2 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-2xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-5">
+            <i data-lucide="bone" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Orthopedics & Joint Replacement</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Total knee & hip replacement, complex bone fracture fixation, arthroscopy, spine care, and sports injury rehabilitation.
+          </p>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-red-600">
+            Specialist Ortho Surgeons <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Department 3 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-2xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-5">
+            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">ICU, HDU & Critical Care</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Advanced multi-parameter invasive monitoring, invasive/non-invasive mechanical ventilation, and dedicated 24/7 intensivists.
+          </p>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-red-600">
+            Continuous Vitals Monitoring <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Department 4 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-2xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-5">
+            <i data-lucide="scissors" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">General & Laparoscopic Surgery</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Minimally invasive keyhole surgeries for gall bladder stones, hernia, appendix, piles, fistulas, and emergency abdominal procedures.
+          </p>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-red-600">
+            Day-care & Modular OT <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Department 5 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-2xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-5">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Diagnostics & Digital X-Ray</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Computerized pathology lab, immediate trauma X-Rays, ultrasound scans, and ECG services available day and night.
+          </p>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-red-600">
+            Accurate Rapid Reporting <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Department 6 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-2xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-5">
+            <i data-lucide="pill" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">24/7 Pharmacy & Inpatient Care</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Round-the-clock stocked pharmacy with essential critical care medicines, surgical consumables, and comfortable private/semi-private rooms.
+          </p>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-red-600">
+            100% Genuine Medicines <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Operational Timings Section -->
+  <section id="hours" class="py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-red-600 font-bold uppercase tracking-wider text-xs block">Operating Hours</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900">
+            Always Ready, Day and Night
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Hasija Multi Speciality & Trauma Care Hospital maintains <strong>24-hour non-stop emergency and trauma services</strong> 365 days a year on GT Karnal Road.
+          </p>
+
+          <div class="p-4 rounded-2xl bg-red-50 border border-red-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-red-900 text-sm">
+              <i data-lucide="clock" class="w-4 h-4 text-red-600"></i> Real-Time Hospital Status:
+            </div>
+            <div id="liveDetailStatusBox" class="text-xs text-red-800 leading-normal">
+              Calculating current status...
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="tel:09416536804" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider transition">
+              <i data-lucide="phone-call" class="w-4 h-4 text-red-400"></i> Call Front Desk (09416536804)
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-xs">
+            <div class="px-6 py-4 bg-slate-100/90 border-b border-slate-200 flex justify-between items-center">
+              <span class="font-bold text-sm text-slate-900">Weekly Schedule Breakdown</span>
+              <span class="text-xs text-slate-500 font-semibold">Sonipat, Haryana</span>
+            </div>
+
+            <div class="divide-y divide-slate-200/80 text-sm">
+              
+              <!-- Monday -->
+              <div class="px-6 py-3.5 flex justify-between items-center" id="dayRow-1">
+                <span class="font-semibold text-slate-800">Monday</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                  Open 24 Hours
+                </span>
+              </div>
+
+              <!-- Tuesday -->
+              <div class="px-6 py-3.5 flex justify-between items-center" id="dayRow-2">
+                <span class="font-semibold text-slate-800">Tuesday</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                  Open 24 Hours
+                </span>
+              </div>
+
+              <!-- Wednesday -->
+              <div class="px-6 py-3.5 flex justify-between items-center" id="dayRow-3">
+                <div>
+                  <span class="font-semibold text-slate-800">Wednesday</span>
+                  <span class="text-[11px] text-slate-500 block">(Haryana Heroes' Martyrdom Day - OPD Hours Might Differ)</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                  Emergency Open 24 Hours
+                </span>
+              </div>
+
+              <!-- Thursday -->
+              <div class="px-6 py-3.5 flex justify-between items-center" id="dayRow-4">
+                <span class="font-semibold text-slate-800">Thursday</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                  Open 24 Hours
+                </span>
+              </div>
+
+              <!-- Friday -->
+              <div class="px-6 py-3.5 flex justify-between items-center" id="dayRow-5">
+                <span class="font-semibold text-slate-800">Friday</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                  Open 24 Hours
+                </span>
+              </div>
+
+              <!-- Saturday -->
+              <div class="px-6 py-3.5 flex justify-between items-center" id="dayRow-6">
+                <span class="font-semibold text-slate-800">Saturday</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                  Open 24 Hours
+                </span>
+              </div>
+
+              <!-- Sunday -->
+              <div class="px-6 py-3.5 flex justify-between items-center bg-amber-50/60" id="dayRow-0">
+                <div>
+                  <span class="font-bold text-slate-900">Sunday</span>
+                  <span class="text-[11px] text-amber-700 block">(Emergency Active 24 Hours)</span>
+                </div>
+                <div class="text-right">
+                  <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-amber-200 text-amber-900 text-xs font-bold">
+                    OPD: 9:00 AM – 4:00 PM
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-red-600 font-bold uppercase tracking-wider text-xs block mb-2">Verified Testimonials</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
+            Patient Stories & Ratings
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">Honest feedback from patients across Kundli, Sonipat, and Delhi NCR.</p>
+        </div>
+
+        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-xs self-start md:self-auto">
+          <div class="text-center pr-4 border-r border-slate-200">
+            <span class="text-3xl font-heading font-extrabold text-slate-900">4.0</span>
+            <div class="flex text-amber-400 mt-1">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 text-slate-300"></i>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-800">Google Verified Rating</div>
+            <div class="text-xs text-slate-500">129+ Patient Reviews</div>
+            <span class="inline-flex items-center gap-1 text-[11px] text-red-600 font-semibold mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> Trauma Care Specialist
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-4">
+              "Had a highway emergency near Kundli late at night. The trauma team responded within moments. The orthopedic doctor stabilized the fracture right away. Forever grateful to Hasija Hospital staff for timely attention."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <div class="w-9 h-9 rounded-full bg-red-100 text-red-800 font-bold flex items-center justify-center text-xs">
+              RK
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">Rajesh Khatri</div>
+              <div class="text-[11px] text-slate-400">Highway Emergency Care</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-slate-300"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-4">
+              "My father was admitted here for laparoscopic gallbladder surgery. Clean hospital rooms, attentive nursing staff, and transparent billing. Highly recommended for people living near Kundli & Sonipat."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-800 font-bold flex items-center justify-center text-xs">
+              MS
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">Manish Sahni</div>
+              <div class="text-[11px] text-slate-400">General Surgery Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-4">
+              "Appreciate having a hospital with 24 hours open pharmacy and testing labs on GT Karnal Road. Doctors give adequate time during OPD consults and don't rush."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-xs">
+              DN
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">Deepak Narang</div>
+              <div class="text-[11px] text-slate-400">Sonipat Resident</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Highway Location -->
+  <section id="contact" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-red-600 font-bold uppercase tracking-wider text-xs block mb-2">Highway Location</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900">
+          How to Reach Hasija Hospital
+        </h2>
+        <p class="text-slate-600 text-sm mt-1">
+          Convenient direct access along the Delhi–Chandigarh National Highway (NH-44).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Contact Cards -->
+        <div class="lg:col-span-6 space-y-4 flex flex-col justify-between">
+          
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">Hospital Address</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                32, Milestone, G.T. Karnal Road, Kundli, Sonipat, Haryana 131028
+              </p>
+              <div class="mt-3">
+                <a 
+                  href="https://maps.google.com/?q=Hasija+Hospital+32+Milestone+GT+Karnal+Road+Kundli+Sonipat" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-700"
+                >
+                  <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Navigate on Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <i data-lucide="phone" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">Emergency & General Inquiries</h3>
+              <p class="text-slate-600 text-sm mb-3">
+                Direct phone line active 24/7 for ambulances, admissions, and consultations:
+              </p>
+              <div class="flex flex-wrap gap-2.5">
+                <a href="tel:09416536804" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-600 text-white font-bold text-xs hover:bg-red-700 transition">
+                  <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> 09416536804
+                </a>
+                <a href="https://wa.me/919416536804" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp Help
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">Landmark & Easy Access</h3>
+              <p class="text-slate-600 text-sm">
+                Direct service lane access on NH-44 at 32 Milestone Kundli. Broad vehicle ramp for ambulances and spacious patient parking.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Visual Map Card -->
+        <div class="lg:col-span-6 bg-slate-900 rounded-3xl overflow-hidden text-white flex flex-col justify-between p-7 relative">
+          <div class="space-y-3">
+            <span class="text-xs uppercase tracking-wider font-bold text-red-400 flex items-center gap-1.5">
+              <i data-lucide="navigation-2" class="w-4 h-4"></i> Highway Trauma Corridor
+            </span>
+            <h3 class="text-2xl font-bold font-heading">Direct NH-44 Connectivity</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Situated precisely at 32 Milestone on G.T. Karnal Road, providing quick transit for emergencies from Kundli Industrial Area, TDI City, Rai, and Sonipat city.
+            </p>
+          </div>
+
+          <div class="my-6 p-4 rounded-2xl bg-white/10 border border-white/15 space-y-2">
+            <div class="text-xs font-semibold text-slate-200 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> Ample ambulance & patient parking
+            </div>
+            <div class="text-xs font-semibold text-slate-200 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> Wheelchair & stretcher ramp access
+            </div>
+            <div class="text-xs font-semibold text-slate-200 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> 24-hour critical triage gate
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <a 
+              href="https://maps.google.com/?q=Hasija+Hospital+32+Milestone+GT+Karnal+Road+Kundli+Sonipat" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="flex-1 min-w-[180px] py-3 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs text-center inline-flex items-center justify-center gap-2 transition"
+            >
+              <i data-lucide="map" class="w-4 h-4"></i> Open in Google Maps
+            </a>
+            <button 
+              onclick="copyHospitalAddress()" 
+              class="py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs inline-flex items-center gap-1.5 transition border border-white/20"
+            >
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Address
+            </button>
+          </div>
+
+          <p id="addressCopyNotification" class="text-xs text-emerald-400 font-semibold mt-3 hidden">
+            Address copied to clipboard!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2.5 text-white font-heading font-bold text-lg">
+            <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white">
+              <i data-lucide="cross" class="w-5 h-5"></i>
+            </div>
+            Hasija Multi Speciality & Trauma Care Hospital
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-md">
+            Premier multi-speciality hospital and 24-hour trauma care center catering to Sonipat, Kundli, and highway travelers on G.T. Karnal Road (NH-44).
+          </p>
+          <div class="text-[11px] text-slate-500">
+            Emergency Casualty: Open 24 Hours • Registration & Inpatient Available
+          </div>
+        </div>
+
+        <div>
+          <h5 class="text-white font-semibold text-sm mb-3">Departments</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#emergency-triage" class="hover:text-red-400 transition">24x7 Trauma & Emergency</a></li>
+            <li><a href="#services" class="hover:text-red-400 transition">Orthopedics & Fracture Care</a></li>
+            <li><a href="#services" class="hover:text-red-400 transition">ICU & Critical Care</a></li>
+            <li><a href="#services" class="hover:text-red-400 transition">Laparoscopic Surgery</a></li>
+            <li><a href="#services" class="hover:text-red-400 transition">Digital X-Ray & Pathology</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-white font-semibold text-sm mb-3">Emergency Contact</h5>
+          <p class="text-xs text-slate-400 mb-1">Direct Ambulance & Casualty:</p>
+          <a href="tel:09416536804" class="text-red-400 font-extrabold text-sm block mb-2 hover:underline">
+            09416536804
+          </a>
+          <p class="text-[11px] text-slate-400">
+            32, Milestone, G.T. Karnal Road, Kundli, Sonipat, Haryana 131028
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px]">
+        <div>
+          &copy; <span id="yearPlaceholder"></span> Hasija Multi Speciality & Trauma Care Hospital. All rights reserved.
+        </div>
+        <div class="flex items-center gap-3">
+          <span>Google Rated 4.0★ (129 Reviews)</span>
+          <span>•</span>
+          <span>Kundli, Sonipat</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Emergency Bottom Bar -->
+  <div class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center gap-2.5 z-50 md:hidden shadow-2xl">
+    <a 
+      href="tel:09416536804" 
+      class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-red-600 active:bg-red-700 text-white font-extrabold text-xs shadow-md shadow-red-600/30"
+    >
+      <i data-lucide="phone-call" class="w-4 h-4"></i> CALL EMERGENCY
+    </a>
+    <a 
+      href="#booking-section" 
+      class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-slate-900 active:bg-slate-800 text-white font-semibold text-xs"
+    >
+      <i data-lucide="calendar" class="w-4 h-4"></i> Book OPD
+    </a>
+  </div>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="bookingSummaryModal" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-xs hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in duration-200">
+      
+      <button 
+        onclick="closeBookingModal()" 
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-800 transition"
+      >
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="check" class="w-8 h-8 stroke-[2.5]"></i>
+        </div>
+        <h3 class="text-2xl font-bold font-heading text-slate-900">Appointment Registered</h3>
+        <p class="text-xs text-slate-600 mt-1">Hasija Multi Speciality & Trauma Care Hospital</p>
+      </div>
+
+      <!-- Detail list -->
+      <div id="modalSummarySlip" class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-xs space-y-2.5 mb-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="space-y-3">
+        <!-- WhatsApp direct notify -->
+        <a 
+          id="sendWhatsAppSlipBtn" 
+          href="#" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Send Slip to Hospital WhatsApp (+91 9416536804)
+        </a>
+
+        <button 
+          onclick="copyAppointmentDetails()" 
+          class="w-full py-3 px-4 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center justify-center gap-1.5 transition"
+        >
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Slip to Clipboard
+        </button>
+      </div>
+
+      <p class="text-center text-[11px] text-slate-500 mt-4">
+        For immediate admission or ambulance support, please call <strong>09416536804</strong> directly.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script>
+    document.getElementById('yearPlaceholder').textContent = new Date().getFullYear();
+
+    // Standard Weekday 24h shifts vs Sunday 9 AM - 4 PM
+    const weekdaySlots = [
+      "10:00 AM", "11:30 AM", "01:00 PM", "03:00 PM", "05:00 PM", "07:00 PM", "08:30 PM", "Night Shift (Casualty)"
+    ];
+
+    const sundaySlots = [
+      "09:00 AM", "10:30 AM", "12:00 PM", "01:30 PM", "03:00 PM", "03:30 PM"
+    ];
+
+    let selectedHospitalSlot = "";
+    let activeAppointmentSlip = null;
+
+    // Date picker constraints
+    const consultDateInput = document.getElementById('consultationDate');
+    const now = new Date();
+    const curYear = now.getFullYear();
+    const curMonth = String(now.getMonth() + 1).padStart(2, '0');
+    const curDay = String(now.getDate()).padStart(2, '0');
+    consultDateInput.min = `${curYear}-${curMonth}-${curDay}`;
+    consultDateInput.value = `${curYear}-${curMonth}-${curDay}`;
+
+    // Populates slot pills according to day of the week
+    function updateHospitalSlots() {
+      const selectedVal = consultDateInput.value;
+      const container = document.getElementById('slotGridContainer');
+      const dateStatusHelp = document.getElementById('dateStatusHelp');
+      container.innerHTML = "";
+      selectedHospitalSlot = "";
+      document.getElementById('selectedHospitalSlot').value = "";
+
+      if (!selectedVal) return;
+
+      const pickedDate = new Date(selectedVal + "T00:00:00");
+      const dayIndex = pickedDate.getDay(); // 0 = Sun
+
+      const isSunday = (dayIndex === 0);
+      const slotsToRender = isSunday ? sundaySlots : weekdaySlots;
+
+      if (isSunday) {
+        dateStatusHelp.textContent = "Sunday OPD: 9:00 AM – 4:00 PM (Emergency Casualty remains Open 24/7).";
+        dateStatusHelp.className = "text-[11px] text-amber-700 font-bold mt-1";
+      } else {
+        dateStatusHelp.textContent = "Mon–Sat: Full 24 Hours Clinical Coverage & Routine OPD Shifts.";
+        dateStatusHelp.className = "text-[11px] text-slate-600 font-medium mt-1";
+      }
+
+      slotsToRender.forEach(slot => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = slot;
+        btn.className = "time-btn py-2 px-2.5 rounded-xl border border-slate-200 text-xs font-semibold bg-white text-slate-700 hover:border-red-600 hover:bg-red-50 transition text-center";
+        
+        btn.onclick = function() {
+          document.querySelectorAll('.time-btn').forEach(b => {
+            b.classList.remove('bg-red-600', 'text-white', 'border-red-600');
+            b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+          });
+          btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+          btn.classList.add('bg-red-600', 'text-white', 'border-red-600');
+          
+          selectedHospitalSlot = slot;
+          document.getElementById('selectedHospitalSlot').value = slot;
+          document.getElementById('slotWarning').classList.add('hidden');
+        };
+
+        container.appendChild(btn);
+      });
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Toggle urgent status switch
+    function toggleUrgentState(checkbox) {
+      const urgentTag = document.getElementById('urgentTag');
+      const submitBtn = document.getElementById('submitFormBtn');
+      const deptSelect = document.getElementById('clinicalDepartment');
+
+      if (checkbox.checked) {
+        urgentTag.classList.remove('hidden');
+        submitBtn.classList.replace('bg-red-600', 'bg-rose-700');
+        submitBtn.innerHTML = `<i data-lucide="alert-circle" class="w-5 h-5"></i> Send Priority Emergency Triage Alert`;
+        deptSelect.value = "Trauma & Emergency Care (Casualty)";
+      } else {
+        urgentTag.classList.add('hidden');
+        submitBtn.classList.replace('bg-rose-700', 'bg-red-600');
+        submitBtn.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i> Confirm Appointment Details`;
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Real-time opening status tracker
+    function evaluateHospitalOpenStatus() {
+      const todayDate = new Date();
+      const day = todayDate.getDay(); // 0 = Sun
+      const hours = todayDate.getHours();
+
+      // Highlight corresponding row in schedule table
+      const row = document.getElementById(`dayRow-${day}`);
+      if (row) {
+        row.classList.add('bg-red-50/80', 'font-bold');
+      }
+
+      const headerStatus = document.getElementById('headerLiveStatus');
+      const detailBox = document.getElementById('liveDetailStatusBox');
+
+      // The hospital trauma & emergency is ALWAYS open 24 hours.
+      // On Sunday, regular OPD operates 9 AM - 4 PM.
+      if (day === 0) {
+        const isOpdOpen = (hours >= 9 && hours < 16);
+        headerStatus.textContent = isOpdOpen ? "Open 24/7 (Sunday OPD 9am-4pm)" : "Emergency Open 24/7 (OPD Closed)";
+        detailBox.innerHTML = `🟢 <strong>Emergency Casualty Open 24/7</strong>. Sunday OPD is ${isOpdOpen ? 'active until 4:00 PM' : 'closed for today, reopens Monday 24h'}. Doctors & ICU on duty.`;
+      } else {
+        headerStatus.textContent = "Hospital & Emergency: Open 24 Hours";
+        detailBox.innerHTML = `🟢 <strong>Open 24 Hours Today</strong>. Comprehensive Trauma, Surgery, Inpatient, ICU, Pharmacy, and Diagnostic services currently active.`;
+      }
+    }
+
+    // Booking Submission Handler
+    function handleFormSubmission(event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById('patientFullName').value.trim();
+      const phone = document.getElementById('patientContactPhone').value.trim();
+      const department = document.getElementById('clinicalDepartment').value;
+      const date = document.getElementById('consultationDate').value;
+      const slot = document.getElementById('selectedHospitalSlot').value;
+      const symptoms = document.getElementById('patientSymptoms').value.trim();
+      const isUrgent = document.getElementById('isUrgentCase').checked;
+
+      if (!slot) {
+        document.getElementById('slotWarning').classList.remove('hidden');
+        return;
+      }
+
+      activeAppointmentSlip = {
+        fullName,
+        phone,
+        department,
+        date,
+        slot,
+        symptoms: symptoms || "Routine medical consultation",
+        isUrgent
+      };
+
+      // Populate Modal Summary
+      const slipContainer = document.getElementById('modalSummarySlip');
+      slipContainer.innerHTML = `
+        <div class="flex justify-between py-1 border-b border-slate-200">
+          <span class="text-slate-500">Patient:</span>
+          <span class="font-bold text-slate-800">${fullName}</span>
+        </div>
+        <div class="flex justify-between py-1 border-b border-slate-200">
+          <span class="text-slate-500">Contact:</span>
+          <span class="font-bold text-slate-800">${phone}</span>
+        </div>
+        <div class="flex justify-between py-1 border-b border-slate-200">
+          <span class="text-slate-500">Department:</span>
+          <span class="font-bold text-red-600">${department}</span>
+        </div>
+        <div class="flex justify-between py-1 border-b border-slate-200">
+          <span class="text-slate-500">Scheduled:</span>
+          <span class="font-bold text-slate-800">${date} (${slot})</span>
+        </div>
+        <div class="flex justify-between py-1 border-b border-slate-200">
+          <span class="text-slate-500">Triage Priority:</span>
+          <span class="font-bold ${isUrgent ? 'text-rose-600 uppercase' : 'text-slate-700'}">${isUrgent ? 'URGENT / EMERGENCY' : 'Standard OPD'}</span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span class="text-slate-500">Hospital:</span>
+          <span class="font-semibold text-slate-800 text-right">Hasija Trauma Hospital, 32 Milestone Kundli</span>
+        </div>
+      `;
+
+      // Form WhatsApp Link
+      const waNumber = "919416536804";
+      const message = `*Hasija Multi Speciality & Trauma Care Hospital*%0A*Appointment Slip:*%0A%0A- *Patient:* ${encodeURIComponent(fullName)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Department:* ${encodeURIComponent(department)}%0A- *Date & Shift:* ${encodeURIComponent(date)} at ${encodeURIComponent(slot)}%0A- *Priority:* ${isUrgent ? 'URGENT EMERGENCY' : 'Standard OPD'}%0A- *Notes/Symptoms:* ${encodeURIComponent(symptoms || 'None')}%0A%0APlease confirm my appointment/arrival. Thank you!`;
+      
+      document.getElementById('sendWhatsAppSlipBtn').href = `https://wa.me/${waNumber}?text=${message}`;
+
+      // Open Modal
+      const modal = document.getElementById('bookingSummaryModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingSummaryModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Clipboard Copy Helper for Appointment
+    function copyAppointmentDetails() {
+      if (!activeAppointmentSlip) return;
+      const text = `Hasija Multi Speciality & Trauma Care Hospital
+Patient: ${activeAppointmentSlip.fullName}
+Phone: ${activeAppointmentSlip.phone}
+Department: ${activeAppointmentSlip.department}
+Date: ${activeAppointmentSlip.date}
+Shift: ${activeAppointmentSlip.slot}
+Priority: ${activeAppointmentSlip.isUrgent ? 'URGENT EMERGENCY' : 'Standard OPD'}
+Location: 32 Milestone, G.T. Karnal Road, Kundli, Sonipat (09416536804)`;
+
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+
+      showTransientNotification("Appointment details copied!");
+    }
+
+    // Clipboard Copy for Hospital Address
+    function copyHospitalAddress() {
+      const addr = "Hasija Multi Speciality & Trauma Care Hospital, 32 Milestone, G.T. Karnal Road, Kundli, Sonipat, Haryana 131028. Phone: 09416536804";
+      const temp = document.createElement('textarea');
+      temp.value = addr;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+
+      const notice = document.getElementById('addressCopyNotification');
+      notice.classList.remove('hidden');
+      setTimeout(() => notice.classList.add('hidden'), 3500);
+    }
+
+    function showTransientNotification(msg) {
+      const toast = document.createElement('div');
+      toast.className = "fixed top-6 right-6 z-50 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-slate-700 transition";
+      toast.textContent = msg;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2500);
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+      updateHospitalSlots();
+      evaluateHospitalOpenStatus();
+      setInterval(evaluateHospitalOpenStatus, 60000);
+    });
+  </script>
+</body>
+</html>
